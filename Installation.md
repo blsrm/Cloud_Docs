@@ -58,12 +58,13 @@
     
     ```
     
-1. Install 
+1. Install AWS CLI in Linux 
     ```console
     
     For AWS CLI
-    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.1.zip" -o "awscliv2.zip"
-    unzip awscliv2.zip
-    sudo ./aws/install
+    
+    $ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.1.zip" -o "awscliv2.zip"
+    $ unzip awscliv2.zip
+    $ sudo ./aws/install
     ```
     
