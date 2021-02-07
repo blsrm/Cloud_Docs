@@ -11,6 +11,14 @@
 
     For Linux 
     $ curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.18.8/bin/linux/amd64/kubectl && chmod u+x kubectl && mv kubectl /bin/kubectl
+    $ kubectl version --short --client
+    ```
+1. Install EKSCTL
+
+    ```
+    curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+    sudo mv /tmp/eksctl /usr/local/bin
+    eksctl version
     ```
 
 1. Install  **Terragrunt** 
@@ -20,20 +28,14 @@
     For Mac:
 
     $ curl -o terragrunt -LO https://github.com/gruntwork-io/terragrunt/releases/download/v0.26.7/terragrunt_darwin_amd64
-
     $ chmod +x terragrunt
-
     $ mv terragrunt /usr/local/bin
-
 
     For Linux
 
     $ curl -o terragrunt -LO https://github.com/gruntwork-io/terragrunt/releases/download/v0.26.7/terragrunt_linux_amd64
-
     $ chmod +x terragrunt
-
     $ mv terragrunt /usr/local/bin
-
     ```
 
 
@@ -43,7 +45,6 @@
     For Mac
     
     $ tfenv install 0.13.5
-
     $ tfenv use 0.13.5
 
     You can pin the version you want in your bash profile as the default
@@ -53,9 +54,7 @@
     For Linux
     
     $ curl -o terraform.zip -OL https://releases.hashicorp.com/terraform/0.13.5/terraform_0.13.5_linux_amd64.zip
-
     $ unzip terraform.zip -d /usr/local/bin
-    
     ```
     
 1. Install AWS CLI in Linux 
@@ -66,5 +65,55 @@
     $ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.1.zip" -o "awscliv2.zip"
     $ unzip awscliv2.zip
     $ sudo ./aws/install
+    
+    For Custom Path Installation
+    
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscliv2.zip"
+    unzip awscliv2.zip
+    sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
+
+    sudo rm /usr/local/bin/aws
+    sudo rm /usr/local/bin/aws_completer
+    sudo rm -rf /usr/local/aws-cli
+    ```
+1. Install Python version
+    ```
+    wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tgz
+    tar xzf Python-3.6.8.tgz
+    cd Python-3.6.8
+    sudo ./configure --enable-optimizations
+    sudo make altinstall
+    python3.6 -V
+    ```
+1. Install GIT
+    ```
+    sudo yum install git -y
+    ```
+1. Install Jq
+    ```
+    sudo yum install jq
+    ```
+1. Install OpenJDK
+    ```
+    sudo amazon-linux-extras install java-openjdk11
+    ```
+1. Install 
     ```
     
+    ```
+1. Install 
+    ```
+
+    ```
+1. Install 
+    ```
+
+    ```
+1. Install 
+    ```
+
+    ```
+1. Install 
+    ```
+
+    ```
