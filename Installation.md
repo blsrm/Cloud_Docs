@@ -1,16 +1,17 @@
 ### Software Installation Steps
 
-#### Helm 2
-´´´
-helm repo add aws https://aws.github.io/eks-charts
-helm install --name my-aws-load-balancer-controller aws/aws-load-balancer-controller --version 1.1.3
-´´´
-#### Helm 3
-´´´
-helm repo add aws https://aws.github.io/eks-charts
-helm install my-aws-load-balancer-controller aws/aws-load-balancer-controller --version 1.1.3
-https://youtu.be/DMVS5PByxbg
-´´´
+1. Install __kubectl__ 
+
+    ```console
+    For Mac
+    $ curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.18.9/2020-11-02/bin/darwin/amd64/kubectl
+    $ chmod +x ./kubectl
+    $ echo 'export PATH=$PATH:$HOME/bin' >> ~/.bash_profile
+    $ kubectl version --short --client
+
+    For Linux 
+    $ curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.18.8/bin/linux/amd64/kubectl && chmod u+x kubectl && mv kubectl /bin/kubectl
+    ```
 
 1. Install  **Terragrunt** 
 
