@@ -55,15 +55,22 @@ It is better to block full subnet ranges (/24) for each cluster in order to avoi
 ## Below are Check lists to verify and confirm for Private Cluster setup
 
 1. Below are the important VPC endpoints for private clusters need to be created
-```
-com.amazonaws.eu-central-1.ec2
-com.amazonaws.eu-central-1.ecr.api
-com.amazonaws.eu-central-1.ecr.dkr
-com.amazonaws.eu-central-1.s3
-com.amazonaws.eu-central-1.logs
-com.amazonaws.eu-central-1.sts
-com.amazonaws.eu-central-1.elasticloadbalancing
-com.amazonaws.eu-central-1.autoscaling
-```
-1. asd
+
+    ```
+    com.amazonaws.eu-central-1.ec2
+    com.amazonaws.eu-central-1.ecr.api
+    com.amazonaws.eu-central-1.ecr.dkr
+    com.amazonaws.eu-central-1.s3
+    com.amazonaws.eu-central-1.logs
+    com.amazonaws.eu-central-1.sts
+    com.amazonaws.eu-central-1.elasticloadbalancing
+    com.amazonaws.eu-central-1.autoscaling
+    ```
+1. Install EKSCTL
+
+    ```
+    curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+    sudo mv /tmp/eksctl /usr/local/bin
+    eksctl version
+    ```
 
