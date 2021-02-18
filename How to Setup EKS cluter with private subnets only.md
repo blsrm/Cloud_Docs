@@ -4,10 +4,9 @@ This topic describes how to deploy a private cluster without outbound internet a
 
 Nodes must be able to communicate with the control plane and other AWS services. If nodes are deployed in a private subnet, then it must have either:
 
-
-    1. Set up a default route for the subnet to a NAT gateway. The NAT gateway must be assigned a public IP address to provide internet access for the nodes.
+1. Set up a default route for the subnet to a NAT gateway. The NAT gateway must be assigned a public IP address to provide internet access for the nodes.
                                                             (OR)
-    2. Configuration of necessary settings for the subnet and taken the necessary actions listed below for Private clusters.
+2. Configuration of necessary settings for the subnet and taken the necessary actions listed below for Private clusters.
 
 
 ## Requirements
