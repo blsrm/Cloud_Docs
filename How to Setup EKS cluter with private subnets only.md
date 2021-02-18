@@ -1,6 +1,6 @@
 ## How to setup AWS EKS Cluster in Private Subnets Only
 
-This topic describes how to deploy a private cluster without outbound internet access.
+This topic describes how to deploy a private cluster without outbound internet access. This is applicable for **EKS Managed / Self Node Cluster** and **Fargate Profiles**
 
 ## Requirements
 
