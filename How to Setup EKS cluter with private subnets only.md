@@ -52,7 +52,18 @@ Be sure that the subnets that you specify have enough available IP addresses for
 
 It is better to block full subnet ranges (/24) for each cluster in order to avoid IPs shortage.
 
+## Below are Check lists to verify and confirm for Private Cluster setup
 
-
-
+1. Below are the important VPC endpoints for private clusters need to be created
+```
+com.amazonaws.eu-central-1.ec2
+com.amazonaws.eu-central-1.ecr.api
+com.amazonaws.eu-central-1.ecr.dkr
+com.amazonaws.eu-central-1.s3
+com.amazonaws.eu-central-1.logs
+com.amazonaws.eu-central-1.sts
+com.amazonaws.eu-central-1.elasticloadbalancing
+com.amazonaws.eu-central-1.autoscaling
+```
+1. asd
 
