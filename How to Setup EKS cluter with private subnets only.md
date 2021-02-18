@@ -3,6 +3,7 @@
 This topic describes how to deploy a private cluster without outbound internet access. This is applicable for **EKS Managed / Self Node Cluster** and **Fargate Profiles**
 
 Nodes must be able to communicate with the control plane and other AWS services. If nodes are deployed in a private subnet, then it must have either:
+
     ```
     1. Set up a default route for the subnet to a NAT gateway. The NAT gateway must be assigned a public IP address to provide internet access for the nodes.
     2. Configuration of necessary settings for the subnet and taken the necessary actions listed below for Private clusters.
