@@ -41,3 +41,18 @@ Here are some things to consider when running Amazon EKS in a private cluster wi
 
 1. App Mesh is supported with private clusters when you use the App Mesh Envoy VPC endpoint.
 
+
+## IP Block select for Private subnets
+
+Be sure that the subnets that you specify have enough available IP addresses for the network interfaces and your pods.
+
+1. Consider System resources consuming IPs - Minimum IPs (approx. ~ 10 to 20) are consumed by EKS Cluster and Internal resources core dns, kube-proxy, end point creations.
+2. Conside no of application and its micro services as of now and will be grow in the future
+3. Consider replicas of each services (approx. 2 to 3) based on work load will consume additional IPs allocation
+
+It is better to block full subnet ranges (/24) for each cluster in order to avoid IPs shortage.
+
+
+
+
+
