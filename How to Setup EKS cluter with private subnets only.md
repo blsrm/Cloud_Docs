@@ -66,11 +66,37 @@ It is better to block full subnet ranges (/24) for each cluster in order to avoi
     com.amazonaws.eu-central-1.elasticloadbalancing
     com.amazonaws.eu-central-1.autoscaling
     ```
-1. Install EKSCTL
+1. Endpoint private access is required for nodes to register with the cluster endpoint. Endpoint public access is optional.
 
     ```
-    curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
-    sudo mv /tmp/eksctl /usr/local/bin
-    eksctl version
+    $ aws eks describe-cluster --name <cluster name> | grep -i access
+            "endpointPublicAccess": false,
+            "endpointPrivateAccess": true,
+            "publicAccessCidrs": []
     ```
+1. VPC must have DNS hostname and DNS resolution support. Check VPC details to see DNS values to be enabled.
 
+1. Subnet tagging requirement
+
+    ```
+    kubernetes.io/cluster/<cluster-name>                             shared
+    kubernetes.io/role/internal-elb                                  1
+    ```
+1. A container image must be in or copied to Amazon Elastic Container Registry (**Amazon ECR**) or to a registry inside the VPC to be pulled.
+
+1. Amazon EKS security group considerations for **Cluster security group**, **Control plane and node security groups** and **Working with tags on SG**
+
+1. The aws-auth ConfigMap must be created from within the VPC. Managing users or IAM roles for your cluster
+
+1. Configuration of HTTP proxy for Amazon EKS worker nodes with user data
+
+1. Include the following text to the bootstrap arguments when launching self-managed nodes: Replace <cluster-endpoint> and <cluster-certificate-authority> with the values from your Amazon EKS cluster
+
+
+## Reference Links
+
+1. https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html
+2. https://docs.aws.amazon.com/eks/latest/userguide/private-clusters.html
+
+
+    
