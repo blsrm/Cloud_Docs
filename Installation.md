@@ -97,9 +97,11 @@
     ```
     sudo amazon-linux-extras install java-openjdk11
     ```
-1. Install 
+1. How to install Ansible 2 on AWS Linux 2 (EC2)
     ```
-    
+    $ sudo yum update -y
+    $ sudo amazon-linux-extras install ansible2 -y
+    $ ansible --version
     ```
 1. Install 
     ```
