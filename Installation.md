@@ -38,6 +38,16 @@
     $ mv terragrunt /usr/local/bin
     ```
 
+1. Install  **Kubergrunt** 
+
+    ```console    
+    
+    For Linux
+
+    $ curl -L https://github.com/gruntwork-io/kubergrunt/releases/download/v0.6.9/kubergrunt_linux_amd64 > kubergrunt 
+    $ chmod +x kubergrunt
+    $ sudo mv kubergrunt /usr/local/bin/
+    ```
 
 1. Install **Terraform** (version 0.13.5) using **tfenv**. With tfenv you can maintain multiple version of terraform
 
