@@ -1,13 +1,21 @@
 ## How to setup AWS EKS Cluster in Private Subnets Only
 
-This topic describes how to deploy a private cluster without outbound internet access. This is applicable for **EKS Managed / Self Node Cluster** and **Fargate Profiles**
+## Networking Modes
+
+**Public endpoint only**: In this case, nodes should have a public IP address to connect to the control plane. There should also be a route to an internet gateway or a NAT gateway where they can use the public IP address of the NAT gateway. This is the default behaviour of the EKS.
+
+**Public and private endpoint**: In this mode, Kubernetes API requests from within the worker node VPC to the control plane go through the EKS-managed ENIs within the worked node VPC.
+
+**Private endpoint only**: Public access to the API server from the internet is closed. Any kubectl commands will work only if they originate from within the VPC or a connected network such as AWS VPN or AWS DirectConnect to your VPC.
+
+
+This article describes how to deploy a private cluster without outbound internet access. This is applicable for **EKS Managed / Self Node Cluster** and **Fargate Profiles**
 
 Nodes must be able to communicate with the control plane and other AWS services. If nodes are deployed in a private subnet, then it must have either:
 
 1. Set up a default route for the subnet to a NAT gateway. The NAT gateway must be assigned a public IP address to provide internet access for the nodes.
                                                             (OR)
 2. Configuration of necessary settings for the subnet and taken the necessary actions listed below for Private clusters.
-
 
 ## Requirements
 
@@ -111,4 +119,13 @@ It is better to block full subnet ranges (/24) for each cluster in order to avoi
 
 Reference Articles
 1. https://medium.com/beck-et-al/private-kubernetes-cluster-on-aws-using-elastic-kubernetes-service-and-its-challenges-89730e097867
+
+AWS Articles 
+1. https://aws.amazon.com/blogs/containers/de-mystifying-cluster-networking-for-amazon-eks-worker-nodes/
+2. https://aws.amazon.com/blogs/containers/upcoming-changes-to-ip-assignment-for-eks-managed-node-groups/
+3. https://docs.aws.amazon.com/eks/latest/userguide/pod-networking.html
+
+
+
+
     
