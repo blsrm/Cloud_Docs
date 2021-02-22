@@ -125,6 +125,9 @@ AWS Articles
 2. https://aws.amazon.com/blogs/containers/upcoming-changes-to-ip-assignment-for-eks-managed-node-groups/
 3. https://docs.aws.amazon.com/eks/latest/userguide/pod-networking.html
 
+Fargate Consideration
+
+1. https://docs.aws.amazon.com/eks/latest/userguide/fargate.html#fargate-considerations
 
 
 
