@@ -109,5 +109,6 @@ It is better to block full subnet ranges (/24) for each cluster in order to avoi
 5. https://docs.aws.amazon.com/vpc/latest/userguide/integrated-services-vpce-list.html
 
 
-
+Reference Articles
+1. https://medium.com/beck-et-al/private-kubernetes-cluster-on-aws-using-elastic-kubernetes-service-and-its-challenges-89730e097867
     
