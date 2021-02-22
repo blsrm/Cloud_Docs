@@ -128,6 +128,10 @@ AWS Articles
 Fargate Consideration
 
 1. https://docs.aws.amazon.com/eks/latest/userguide/fargate.html#fargate-considerations
+2. https://docs.aws.amazon.com/eks/latest/userguide/security-groups-for-pods.html
+3. https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#vpc-resize
+4. https://docs.aws.amazon.com/eks/latest/userguide/eks-networking.html
+5. 
 
 
 
