@@ -86,6 +86,20 @@
     sudo rm /usr/local/bin/aws_completer
     sudo rm -rf /usr/local/aws-cli
     ```
+    
+1. Installing AWS IAM authenticator ---> (This allows us to administor our EKS Clustor, using our IAM Identity)
+
+    https://github.com/kubernetes-sigs/aws-iam-authenticator
+
+    We are using the AWS Version of IAM authenticator ---> https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html
+    ```
+    curl -o aws-iam-authenticator https://amazon-eks.s3-us-west-2.amazonaws.com/1.12.7/2019-03-27/bin/linux/amd64/aws-iam-authenticator
+
+    chmod +x ./aws-iam-authenticator
+
+    mkdir -p $HOME/bin && cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator && export PATH=$HOME/bin:$PATH
+    ```
+
 1. Install Python version
     ```
     wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tgz
