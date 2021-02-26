@@ -1,12 +1,15 @@
 ### This section describes how to install and configure Ansible for IaaC
 
-1. Installation is varrying from flavour of Linux OS
+I. Installation is varrying from flavour of Linux OS
   ```
   1. Launch RED HAT Linux in EC2 instance
+  
   2. Update your EC2 instance
+  
   3. Add a third party repositories named EPEL (Extra Packages for Enterprise Linux)
     # rpm -Uvh https://dl.fedoraproject.org/pub/epel-release-latest-7-noarch.rpm
-  5. Install Ansible
+  
+  4. Install Ansible
     # yum install ansible
 
   Testing
@@ -15,18 +18,22 @@
   
   ```
 
-1. Configuration
+II. Configuration
   ```
   1. Create new user for ansible administration and grant admin access to user (Master & Slave)
     # useradd ansadmin
     # passwd ansadmin
-  3. Enable user login on all EC2 instances (Master & Slave)
+  
+  2. Enable user login on all EC2 instances (Master & Slave)
     # vi /etc/ssh/sshd_config
-  5. Login as a ansadmin user on master and generate ssh key (Master)
+  
+  3. Login as a ansadmin user on master and generate ssh key (Master)
     # ssh-keygen
-  7. Copy keys to target servers (Master)
+  
+  4. Copy keys to target servers (Master)
     # ssh-key-id <target servers>
-  9. Update target servers information on /etc/ansible/hosts file (Master)
+  
+  5. Update target servers information on /etc/ansible/hosts file (Master)
     # echo "10.10.*.*" > /etc/ansible/hosts
   
   Testing 
@@ -36,7 +43,7 @@
     
   ```
 
-1. Ansible Simple commands
+III. Ansible Simple commands
   ```
   Rebooting     - ansible all -a "/sbin/reboot"
   Copy file     - ansible all -m file -a "src=/home/dan dest=/tmp/home"
