@@ -24,3 +24,8 @@ Database Connect
 psql --host=dbserver-dev1.***********.eu-central-1.rds.amazonaws.com --port=5432 --username=rds_user --password --dbname=rdsdbdev1
 
 ```
+
+1. Kubectl port forward 
+```
+  https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#port-forward
+```
