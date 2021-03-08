@@ -127,9 +127,9 @@
     $ sudo amazon-linux-extras install ansible2 -y
     $ ansible --version
     ```
-1. Install 
+1. Install dig in Linux 
     ```
-
+    sudo yum install bind-utils
     ```
 1. Install 
     ```
