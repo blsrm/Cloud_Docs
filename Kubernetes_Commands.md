@@ -29,3 +29,10 @@ psql --host=dbserver-dev1.***********.eu-central-1.rds.amazonaws.com --port=5432
 ```
   https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#port-forward
 ```
+
+#### ACM internal certificate
+```
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/CN=test.com/O=test.com"
+kubectl create secret tls tls-secret --key tls.key --cert tls.crt
+aws acm import-certificate --certificate fileb://tls.crt --private-key fileb://tls.key --certificate-chain fileb://tls.crt --region eu-central-1
+```
