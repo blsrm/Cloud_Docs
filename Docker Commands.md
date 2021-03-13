@@ -17,7 +17,7 @@ To describe the repositories in a registry
 aws ecr describe-repositories
 
 To list the images in a repository
-aws ecr list-images --repository-name ossca-repo --region eu-central-1
+aws ecr list-images --repository-name app-repo --region eu-central-1
 ```
 
 Step 3: Create a repository
