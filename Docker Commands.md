@@ -27,7 +27,7 @@ aws ecr create-repository \
     --image-scanning-configuration scanOnPush=true \
     --region us-east-1
 
-aws ecr create-repository --repository-name ossca/ossca-plus-ipav --region eu-central-1 --image-scanning-configuration scanOnPush=true
+aws ecr create-repository --repository-name app-folder/app-name --region eu-central-1 --image-scanning-configuration scanOnPush=true
 ```
 
 Step 4: Push an image to Amazon ECR
@@ -35,11 +35,11 @@ Step 4: Push an image to Amazon ECR
 docker images
 docker tag hello-world:latest aws_account_id.dkr.ecr.us-east-1.amazonaws.com/hello-world:latest
 
-docker tag ossca/ossca-plus-ipav 612573412292.dkr.ecr.eu-central-1.amazonaws.com/ossca/ossca-plus-ipav:latest
+docker tag app-folder/app-name 61257*******.dkr.ecr.eu-central-1.amazonaws.com/app-folder/app-name:latest
 
 docker push aws_account_id.dkr.ecr.us-east-1.amazonaws.com/hello-world:latest
 
-docker push 612573412292.dkr.ecr.eu-central-1.amazonaws.com/ossca/ossca-plus-ipav:latest
+docker push 61257******.dkr.ecr.eu-central-1.amazonaws.com/app-folder/app-name:latest
 ```
 
 Step 5: Pull an image from Amazon ECR
@@ -61,8 +61,8 @@ aws ecr delete-repository \
       --repository-name hello-world \
       --force
       
-aws ecr list-images --repository-name ossca/ossca-plus-ipav --region eu-central-1
-docker pull 612573412292.dkr.ecr.eu-central-1.amazonaws.com/ossca/ossca-plus-ipav:latest
+aws ecr list-images --repository-name app-folder/app-name --region eu-central-1
+docker pull 612573*******.dkr.ecr.eu-central-1.amazonaws.com/app-folder/app-name:latest
 ```
 
 Sample Docker Repository and IMAGE Creation
