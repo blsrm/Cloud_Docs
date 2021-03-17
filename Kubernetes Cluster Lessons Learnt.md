@@ -1,4 +1,10 @@
 
+## Ingress NGINX Doc
+```
+https://kubernetes.github.io/ingress-nginx/deploy/
+https://kubernetes.github.io/ingress-nginx/deploy/#aws
+```
+
 K8s ingress rewrite doc
 ```
 https://kubernetes.github.io/ingress-nginx/examples/rewrite/
