@@ -1,0 +1,3 @@
+### Technical Challenges / Problems Solved
+
+1. In Private Cluster, after installing EKS we need to http_proxy/https_proxy to connect EKS control plane with worker nodes
