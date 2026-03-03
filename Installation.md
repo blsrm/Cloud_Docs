@@ -171,8 +171,3 @@ node -v
 npm -v
 mvn -version
 ```
-
-1. Install 
-    ```
-
-    ```
