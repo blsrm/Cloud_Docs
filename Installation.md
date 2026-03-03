@@ -131,12 +131,45 @@
     ```
     sudo yum install bind-utils
     ```
+1. Java Install 
+    ```
+sudo apt update
+sudo apt install -y openjdk-17-jdk
+    ```
 1. Install 
     ```
+sudo apt update
+sudo apt install -y openjdk-17-jdk
+java -version
+javac -version
+echo 'export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64' | sudo tee /etc/profile.d/java.sh
+source /etc/profile.d/java.sh
+echo $JAVA_HOME
+   
+curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.bashrc
+nvm --version
+nvm install --lts
+nvm use --lts
+nvm alias default lts/*
+node -v
+npm -v
+nvm -v
 
-    ```
-1. Install 
-    ```
+sudo apt update
+sudo apt install -y unzip zip
+unzip -v | head -1
+
+curl -s "https://get.sdkman.io" | bash
+source ~/.sdkman/bin/sdkman-init.sh
+sdk version
+
+sdk install maven
+mvn --version
+java --version
+node -v
+npm -v
+mvn -version
 
     ```
 1. Install 
