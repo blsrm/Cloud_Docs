@@ -132,12 +132,12 @@
     sudo yum install bind-utils
     ```
 1. Java Install 
-    ```
+```
 sudo apt update
 sudo apt install -y openjdk-17-jdk
-    ```
+```
 1. Install 
-    ```
+```
 sudo apt update
 sudo apt install -y openjdk-17-jdk
 java -version
@@ -170,8 +170,8 @@ java --version
 node -v
 npm -v
 mvn -version
+```
 
-    ```
 1. Install 
     ```
 
