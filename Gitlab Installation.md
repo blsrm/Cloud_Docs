@@ -17,7 +17,7 @@ sudo apt install -y \
 ```
 Postfix configuration
 
-- Choose: *Internet Site*
+- Choose: **Internet Site**
 - System mail name: your domain (e.g. gitlab.example.com)
 
 These dependencies are required by GitLab Omnibus packages.
